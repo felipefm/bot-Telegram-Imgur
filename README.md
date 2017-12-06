@@ -13,7 +13,7 @@ $ python3 imgur.py
 ```
 
 ### Versões:
-O BOT ao longo do seu desenvolvimento, já passou por vários outras versões. Hoje está na versão 2.8
+O BOT ao longo do seu desenvolvimento, já passou por vários outras versões. Hoje está na versão 2.9
 
 ### Funcionalidades futuras:
 * Colocar um agendamento no crontab, para que o BOT rode sem nenhum comando do usuário.
