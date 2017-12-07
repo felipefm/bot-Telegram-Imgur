@@ -11,6 +11,12 @@ Doações com PagueSeguro - [![Doações](https://img.shields.io/badge/Fa%C3%A7a
 Ele visualiza as 3 primeiras imagens que se destacaram como "viral" do site Imgur.com e envia para o canal que eu criei.
 Antes de enviar para o canal, o bot verifica se a imagem em questão já foi enviada anteriormente ou não. Caso tenha enviado a imagem, o BOT não faz nada e vai para a próxima imagem.
 Eu só configurei 3 imagens. Depois das 3 imagens o BOT fica aguardando um novo comando.
+Além disso, o BOT informa ao usuário que realizou o comando, as suas ações como por exemplo:
+- Imagem enviada para o canal.
+- Imagem removida do HD.
+- Imagem ja existe no banco de dados.
+
+
 
 # Como executar o bot:
 ```python
@@ -18,7 +24,7 @@ $ python3 imgur.py
 ```
 
 ### Versões:
-O BOT ao longo do seu desenvolvimento, já passou por vários outras versões. Hoje está na versão 2.9
+O BOT ao longo do seu desenvolvimento, já passou por vários outras versões. Hoje está na versão 2.9.1
 
 ### Funcionalidades futuras:
 * Colocar um agendamento no crontab, para que o BOT rode sem nenhum comando do usuário.
