@@ -3,7 +3,9 @@ Unica coisa que peço é que informe a fonte. Se possível, me chame no Telegram
 @FelipeFM
 
 Fale comigo: [![Join the bot support group on Telegram](https://img.shields.io/badge/Suport%20Telegram-%40FelipeFM-blue.svg)](https://telegram.me/FelipeFM)
+
 Compartilhe: [![Twitter](https://img.shields.io/twitter/url/https/github.com/felipefm/bot-Telegram-Imgur.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=https%3A%2F%2Fgithub.com%2Ffelipefm%2Fbot-Telegram-Imgur)
+
 Doações com PagueSeguro - [![Doações](https://img.shields.io/badge/Fa%C3%A7a%20sua%20Contribui%C3%A7%C3%A3o-PagueSeguro-yellow.svg)](https://pag.ae/blrNM4g)
 
 

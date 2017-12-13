@@ -9,8 +9,11 @@ import os #DELETAR ARQUIVOS
 from io import open as iopen
 from urllib.parse import urlsplit
 
-# VERSÃO 2.9.1
+# VERSÃO 2.9.2
 # BOT AINDA EM DESENVOLVIMENTO
+# ATUALIZADO EM 2017-12-13
+# FOI COLOCADO UM RETORNO PARA QUEM ENVIA AÇÃO. ASSIM AJUDA P/ SABER O QUE O BOT ESTA FAZENDO.
+#------------------------------
 # ATUALIZADO EM 2017-12-06
 # RETIREI A PARTE DA HORA. ASSIM O BOT PODE RODAR EM QUALQUER HORARIO.
 
@@ -38,7 +41,7 @@ def go(bot, update):
     i=1
     for a in soup.find_all('a', href=True):
         if i <= 3:
-            # pprint (i)
+            pprint (i)
             url = a['href']
             msg = "http://imgur.com"+url
             msg2 = msg
@@ -69,20 +72,25 @@ def go(bot, update):
                     msg += "\n" + descri_img
                     # msg += "\n Este Bot Ainda esta em fase de testes. Qualquer problema, por favor, informe @FelipeFM."
                     channel = "@ChannelBotImgur"
-                    # channel2 = "@FelipeFM"
+                    # channel2 = "@USUARIO1"
+                    # channel3 = "@USUARIO2"
                     # bot.send_message(chat_id=channel, text=descri_img, photo=open(nome_file, 'rb'))
                     bot.send_photo(chat_id=channel, photo=open(nome_file, 'rb'), caption=descri_img) #SÓ ENVIA 200 CARACTERES NA DESCRIÇÃO DA FOTO
-                    txt = str(i) + " " + nome_file + " Imagem enviada para o canal."
+                    txt = nome_file + " Imagem enviada para o canal."
                     print (txt)
                     bot.send_message(chat_id=update.message.chat_id, text=txt)
                     os.remove(nome_file) #REMOVO A FOTO QUE SALVEI
-                    txt2 = str(i) + " " + nome_file + " Imagem removida do HD."
+                    txt2 = nome_file + " Imagem removida do HD."
                     print (txt2)
                     bot.send_message(chat_id=update.message.chat_id, text=txt2)
+                    # bot.send_message(chat_id=channel2, text="VAI LÁ NO CANAL, TEM IMAGEM NOVA")
+                    # bot.send_message(chat_id=channel3, text="VAI LÁ NO CANAL, TEM IMAGEM NOVA")
                 else:
-                    txt3 = str(i) + " " + nome_file + " Imagem ja existe no banco de dados."
+                    txt3 = nome_file + " Imagem ja existe no banco de dados."
                     print (txt3)
                     bot.send_message(chat_id=update.message.chat_id, text=txt3)
+            else:
+                bot.send_message(chat_id=update.message.chat_id, text="A imagem encontrada é diferente de JPG e PNG.")
             i+=1
 
 up.dispatcher.add_handler(CommandHandler('go', go))
